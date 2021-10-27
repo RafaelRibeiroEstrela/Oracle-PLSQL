@@ -1,0 +1,20 @@
+
+SET SERVEROUTPUT ON
+
+DECLARE
+    vNumber             NUMBER := 10000000;
+BEGIN
+    IF vNumber > 0 AND vNumber < 50000
+    THEN
+        DBMS_OUTPUT.PUT_LINE('O SALARIO ESTA NORMAL');
+    ELSIF vNumber > 50000 AND vNumber < 1000000
+    THEN
+    DBMS_OUTPUT.PUT_LINE('O SALARIO NÃO ESTA NORMAL');
+    ELSE
+        IF vNumber = 10000000
+        THEN
+            DBMS_OUTPUT.PUT_LINE('O SALARIO ESTA DOIDO');
+        END IF;
+    END IF;
+
+END;
